@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Services | Rostrum1</title>
+
+  <style>
+    *{box-sizing:border-box;}
+
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:#050505;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    .background-glow{
+      position:fixed;
+      inset:0;
+      background:
+        radial-gradient(circle at top left, rgba(0,140,255,0.18), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(0,140,255,0.12), transparent 35%);
+      z-index:0;
+    }
+
+    .page{
+      position:relative;
+      z-index:1;
+      min-height:100vh;
+      padding:40px 20px;
+    }
+
+    .container{
+      width:100%;
+      max-width:1180px;
+      margin:0 auto;
+      background:rgba(12,12,12,0.92);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:30px;
+      padding:50px 40px;
+      box-shadow:0 40px 100px rgba(0,0,0,0.7);
+      backdrop-filter:blur(10px);
+    }
+
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:45px;
+      gap:20px;
+    }
+
+    .nav img{
+      width:220px;
+      max-width:55%;
+      margin:-35px 0 -55px -20px;
+    }
+
+    .nav a{
+      color:#cfcfcf;
+      text-decoration:none;
+      margin-left:22px;
+      font-size:15px;
+    }
+
+    .nav a:hover{
+      color:#2da8ff;
+    }
+
+    .tagline{
+      text-align:center;
+      color:#2da8ff;
+      text-transform:uppercase;
+      letter-spacing:4px;
+      font-size:14px;
+      margin-bottom:20px;
+      font-weight:bold;
+    }
+
+    h1{
+      text-align:center;
+      font-size:clamp(42px, 6vw, 72px);
+      margin:0 0 24px 0;
+      line-height:1.05;
+    }
+
+    .intro{
+      max-width:850px;
+      margin:0 auto 50px auto;
+      text-align:center;
+      color:#d2d2d2;
+      font-size:21px;
+      line-height:1.65;
+    }
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:22px;
+      margin-bottom:45px;
+    }
+
+    .service{
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:22px;
+      padding:32px;
+    }
+
+    .service h2{
+      margin:0 0 16px 0;
+      font-size:25px;
+      color:white;
+    }
+
+    .service p{
+      margin:0;
+      color:#cfcfcf;
+      line-height:1.65;
+      font-size:17px;
+    }
+
+    .closing{
+      max-width:850px;
+      margin:0 auto;
+      text-align:center;
+      color:#d2d2d2;
+      font-size:20px;
+      line-height:1.65;
+      padding-top:10px;
+    }
+
+    .button-wrap{
+      text-align:center;
+      margin-top:35px;
+    }
+
+    .button{
+      display:inline-block;
+      background:#1d9fff;
+      color:white;
+      text-decoration:none;
+      border-radius:14px;
+      padding:16px 28px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .button:hover{
+      background:#45b2ff;
+    }
+
+    @media(max-width:760px){
+      .page{
+        padding:18px 12px;
+      }
+
+      .container{
+        padding:28px 18px 34px 18px;
+        border-radius:22px;
+      }
+
+      .nav{
+        display:block;
+        text-align:center;
+        margin-bottom:28px;
+      }
+
+      .nav img{
+        width:260px;
+        max-width:100%;
+        margin:-25px auto -55px auto;
+        display:block;
+      }
+
+      .nav-links{
+        margin-top:35px;
+      }
+
+      .nav a{
+        margin:0 9px;
+        font-size:14px;
+      }
+
+      .tagline{
+        font-size:11px;
+        letter-spacing:2.5px;
+      }
+
+      h1{
+        font-size:38px;
+      }
+
+      .intro{
+        font-size:17px;
+        line-height:1.55;
+        margin-bottom:30px;
+      }
+
+      .services{
+        grid-template-columns:1fr;
+        gap:14px;
+      }
+
+      .service{
+        padding:22px;
+      }
+
+      .service h2{
+        font-size:21px;
+      }
+
+      .service p{
+        font-size:15.5px;
+      }
+
+      .closing{
+        font-size:17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="background-glow"></div>
+
+<div class="page">
+  <div class="container">
+
+    <div class="nav">
+      <a href="index.html">
+        <img src="logo.png" alt="Rostrum1 Logo">
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+      </div>
+    </div>
+
+    <div class="tagline">Services</div>
+
+    <h1>Practical auction technology consultancy.</h1>
+
+    <div class="intro">
+      Rostrum1 assists auction houses and specialist businesses with practical digital systems,
+      operational advice and carefully considered technology improvements.
+    </div>
+
+    <div class="services">
+
+      <div class="service">
+        <h2>Internet Bidding & Digital Rostrum</h2>
+        <p>
+          Advice on internet bidding set-ups, digital rostrum workflows, saleroom equipment,
+          audio and video considerations, livestreaming requirements and practical equipment supply
+          where appropriate.
+        </p>
+      </div>
+
+      <div class="service">
+        <h2>Internal Workflow & Systems</h2>
+        <p>
+          Reviews of valuation, cataloguing, reporting and administrative processes, with practical
+          suggestions for improving daily operations, reducing duplication and making internal systems
+          easier for staff to use.
+        </p>
+      </div>
+
+      <div class="service">
+        <h2>Website & Digital Presence Reviews</h2>
+        <p>
+          Clear, practical reviews of auction and specialist business websites, including vendor journeys,
+          enquiry routes, landing pages, SEO basics, user experience and general digital consistency.
+        </p>
+      </div>
+
+      <div class="service">
+        <h2>Bespoke Development & Specialist Projects</h2>
+        <p>
+          Development of internal tools, valuation applications, workflow utilities, dashboards and
+          database-driven systems where a bespoke solution is more suitable than an off-the-shelf product.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="closing">
+      Every business operates differently. Rostrum1 focuses on practical, realistic solutions shaped around
+      real operational requirements rather than one-size-fits-all systems.
+    </div>
+
+    <div class="button-wrap">
+      <a class="button" href="index.html#contact">Contact Us</a>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
