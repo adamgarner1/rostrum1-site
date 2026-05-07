@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Insights | Rostrum1</title>
+
+  <meta name="description" content="Practical observations and commentary relating to auction technology, operational workflows and digital systems.">
+
+  <meta property="og:title" content="Rostrum1 Insights">
+  <meta property="og:description" content="Practical auction technology consultancy.">
+  <meta property="og:image" content="https://rostrum1.com/logo.png">
+  <meta property="og:url" content="https://rostrum1.com/insights.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <style>
+    *{
+      box-sizing:border-box;
+    }
+
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:#050505;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    .background-glow{
+      position:fixed;
+      inset:0;
+      background:
+        radial-gradient(circle at top left, rgba(0,140,255,0.18), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(0,140,255,0.12), transparent 35%);
+      z-index:0;
+    }
+
+    .page{
+      position:relative;
+      z-index:1;
+      min-height:100vh;
+      padding:40px 20px;
+    }
+
+    .container{
+      width:100%;
+      max-width:1100px;
+      margin:0 auto;
+      background:rgba(12,12,12,0.92);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:30px;
+      padding:42px 40px 34px 40px;
+      box-shadow:0 40px 100px rgba(0,0,0,0.7);
+      backdrop-filter:blur(10px);
+    }
+
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:35px;
+      gap:20px;
+    }
+
+    .nav img{
+      width:220px;
+      max-width:55%;
+      margin:-35px 0 -55px -20px;
+    }
+
+    .nav-links a{
+      color:#cfcfcf;
+      text-decoration:none;
+      margin-left:22px;
+      font-size:15px;
+    }
+
+    .nav-links a:hover{
+      color:#2da8ff;
+    }
+
+    .tagline{
+      text-align:center;
+      color:#2da8ff;
+      text-transform:uppercase;
+      letter-spacing:4px;
+      font-size:14px;
+      margin-bottom:18px;
+      font-weight:bold;
+    }
+
+    h1{
+      text-align:center;
+      font-size:clamp(42px, 6vw, 72px);
+      margin:0 0 24px 0;
+      line-height:1.05;
+    }
+
+    .intro{
+      max-width:850px;
+      margin:0 auto 50px auto;
+      text-align:center;
+      color:#d2d2d2;
+      font-size:21px;
+      line-height:1.65;
+    }
+
+    .article-grid{
+      display:grid;
+      gap:24px;
+    }
+
+    .article{
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:22px;
+      padding:32px;
+      transition:0.3s;
+    }
+
+    .article:hover{
+      border-color:rgba(45,168,255,0.4);
+      transform:translateY(-3px);
+    }
+
+    .article h2{
+      margin:0 0 14px 0;
+      font-size:30px;
+      line-height:1.2;
+    }
+
+    .article p{
+      color:#cfcfcf;
+      line-height:1.7;
+      font-size:17px;
+      margin-bottom:24px;
+    }
+
+    .read-link{
+      display:inline-block;
+      color:#2da8ff;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .read-link:hover{
+      color:#62beff;
+    }
+
+    .footer{
+      text-align:center;
+      margin-top:42px;
+      padding-top:24px;
+      border-top:1px solid rgba(255,255,255,0.08);
+      color:#8e8e8e;
+      font-size:14px;
+      line-height:1.7;
+    }
+
+    @media(max-width:760px){
+
+      .page{
+        padding:18px 12px;
+      }
+
+      .container{
+        padding:28px 18px 28px 18px;
+        border-radius:22px;
+      }
+
+      .nav{
+        display:block;
+        text-align:center;
+      }
+
+      .nav img{
+        width:260px;
+        max-width:100%;
+        margin:-25px auto -55px auto;
+        display:block;
+      }
+
+      .nav-links{
+        margin-top:35px;
+      }
+
+      .nav-links a{
+        margin:0 9px;
+        font-size:14px;
+      }
+
+      .tagline{
+        font-size:11px;
+        letter-spacing:2.5px;
+      }
+
+      h1{
+        font-size:38px;
+      }
+
+      .intro{
+        font-size:17px;
+        line-height:1.55;
+        margin-bottom:30px;
+      }
+
+      .article{
+        padding:24px;
+      }
+
+      .article h2{
+        font-size:24px;
+      }
+
+      .article p{
+        font-size:15.5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="background-glow"></div>
+
+<div class="page">
+
+  <div class="container">
+
+    <div class="nav">
+
+      <a href="index.html">
+        <img src="logo.png" alt="Rostrum1 Logo">
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="insights.html">Insights</a>
+      </div>
+
+    </div>
+
+    <div class="tagline">
+      Insights
+    </div>
+
+    <h1>
+      Practical observations from within the industry.
+    </h1>
+
+    <div class="intro">
+      Commentary and observations relating to auction technology,
+      operational workflows and digital systems.
+    </div>
+
+    <div class="article-grid">
+
+      <div class="article">
+
+        <h2>
+          Common Technical Pressure Points During Live Auctions
+        </h2>
+
+        <p>
+          Live auctions increasingly rely on interconnected systems operating simultaneously.
+          Internet bidding, livestreams, audio equipment and administrative workflows can all
+          introduce operational pressures during fast-moving sales.
+        </p>
+
+        <a class="read-link" href="pressure-points.html">
+          Read Article →
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="footer">
+      © 2026 Rostrum1<br>
+      Practical auction technology consultancy.<br>
+      United Kingdom
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
