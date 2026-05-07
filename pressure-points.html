@@ -14,9 +14,12 @@
   <meta property="og:url" content="https://rostrum1.com/pressure-points.html">
   <meta property="og:type" content="article">
 
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="/favicon.png?v=2">
+  <link rel="shortcut icon" type="image/png" href="/favicon.png?v=2">
+  <link rel="apple-touch-icon" href="/favicon.png?v=2">
 
   <style>
+
     *{
       box-sizing:border-box;
     }
@@ -33,102 +36,99 @@
       position:fixed;
       inset:0;
       background:
-        radial-gradient(circle at top left, rgba(0,140,255,0.18), transparent 30%),
-        radial-gradient(circle at bottom right, rgba(0,140,255,0.12), transparent 35%);
+        radial-gradient(circle at top left, rgba(0,140,255,0.16), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(0,140,255,0.10), transparent 35%);
       z-index:0;
     }
 
     .page{
       position:relative;
       z-index:1;
-      padding:40px 20px;
+      width:100%;
+      padding:40px 20px 70px 20px;
     }
 
     .container{
       width:100%;
-      max-width:980px;
+      max-width:1120px;
       margin:0 auto;
       background:rgba(12,12,12,0.92);
       border:1px solid rgba(255,255,255,0.08);
       border-radius:30px;
-      padding:42px 40px 34px 40px;
+      padding:40px;
       box-shadow:0 40px 100px rgba(0,0,0,0.7);
       backdrop-filter:blur(10px);
     }
 
-    .nav{
+    .topbar{
       display:flex;
       justify-content:space-between;
       align-items:center;
-      margin-bottom:35px;
       gap:20px;
+      margin-bottom:70px;
+      flex-wrap:wrap;
     }
 
-    .nav img{
+    .logo-link img{
       width:220px;
-      max-width:55%;
-      margin:-35px 0 -55px -20px;
+      max-width:100%;
+      display:block;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:26px;
+      flex-wrap:wrap;
     }
 
     .nav-links a{
       color:#cfcfcf;
       text-decoration:none;
-      margin-left:22px;
       font-size:15px;
+      transition:0.3s;
     }
 
     .nav-links a:hover{
       color:#2da8ff;
     }
 
-    .tagline{
-      text-align:center;
-      color:#2da8ff;
-      text-transform:uppercase;
-      letter-spacing:4px;
-      font-size:14px;
-      margin-bottom:18px;
-      font-weight:bold;
-    }
-
     h1{
-      text-align:center;
-      font-size:clamp(40px, 6vw, 68px);
-      margin:0 0 30px 0;
-      line-height:1.08;
+      font-size:clamp(48px, 8vw, 82px);
+      line-height:1;
+      margin:0 0 34px 0;
+      max-width:950px;
+      letter-spacing:-2px;
     }
 
     .intro{
-      max-width:820px;
-      margin:0 auto 50px auto;
-      text-align:center;
-      color:#d2d2d2;
+      max-width:860px;
+      color:#d0d0d0;
       font-size:22px;
-      line-height:1.7;
+      line-height:1.8;
+      margin-bottom:60px;
     }
 
     .article{
-      max-width:820px;
-      margin:0 auto;
+      max-width:860px;
     }
 
     .article h2{
-      font-size:30px;
-      margin-top:48px;
-      margin-bottom:18px;
-      line-height:1.2;
+      font-size:34px;
+      line-height:1.15;
+      margin-top:54px;
+      margin-bottom:20px;
     }
 
     .article p{
       color:#d0d0d0;
-      line-height:1.85;
+      line-height:1.9;
       font-size:18px;
-      margin-bottom:20px;
+      margin-bottom:22px;
     }
 
     .back-link{
       display:inline-block;
-      margin-top:45px;
+      margin-top:40px;
       color:#2da8ff;
       text-decoration:none;
       font-weight:bold;
@@ -140,70 +140,64 @@
 
     .footer{
       text-align:center;
-      margin-top:42px;
-      padding-top:24px;
-      border-top:1px solid rgba(255,255,255,0.08);
+      margin-top:70px;
       color:#8e8e8e;
       font-size:14px;
-      line-height:1.7;
+      line-height:1.8;
     }
 
-    @media(max-width:760px){
+    .footer a{
+      color:#8e8e8e;
+      text-decoration:none;
+    }
 
-      .page{
-        padding:18px 12px;
-      }
+    .footer a:hover{
+      color:#2da8ff;
+    }
+
+    @media(max-width:800px){
 
       .container{
-        padding:28px 18px 28px 18px;
-        border-radius:22px;
+        padding:26px 18px 40px 18px;
+        border-radius:24px;
       }
 
-      .nav{
-        display:block;
-        text-align:center;
+      .topbar{
+        flex-direction:column;
+        align-items:flex-start;
+        margin-bottom:44px;
       }
 
-      .nav img{
-        width:260px;
-        max-width:100%;
-        margin:-25px auto -55px auto;
-        display:block;
+      .logo-link img{
+        width:180px;
       }
 
       .nav-links{
-        margin-top:35px;
-      }
-
-      .nav-links a{
-        margin:0 9px;
-        font-size:14px;
-      }
-
-      .tagline{
-        font-size:11px;
-        letter-spacing:2.5px;
+        gap:18px;
       }
 
       h1{
-        font-size:36px;
+        font-size:50px;
+        line-height:1;
+        margin-bottom:24px;
       }
 
       .intro{
-        font-size:17px;
-        line-height:1.6;
-        margin-bottom:35px;
+        font-size:18px;
+        line-height:1.75;
+        margin-bottom:40px;
       }
 
       .article h2{
-        font-size:24px;
+        font-size:28px;
       }
 
       .article p{
         font-size:16px;
-        line-height:1.75;
+        line-height:1.8;
       }
     }
+
   </style>
 </head>
 
@@ -215,9 +209,9 @@
 
   <div class="container">
 
-    <div class="nav">
+    <div class="topbar">
 
-      <a href="index.html">
+      <a href="index.html" class="logo-link">
         <img src="logo.png" alt="Rostrum1 Logo">
       </a>
 
@@ -228,10 +222,6 @@
         <a href="insights.html">Insights</a>
       </div>
 
-    </div>
-
-    <div class="tagline">
-      Insights
     </div>
 
     <h1>
@@ -290,8 +280,7 @@
       <p>
         Clear, consistent auctioneer audio helps maintain confidence and reduces uncertainty for
         remote participants. Background noise, inconsistent microphone placement or poor room
-        acoustics can quickly make a livestream feel difficult to follow, even where video quality
-        itself is acceptable.
+        acoustics can quickly make a livestream feel difficult to follow.
       </p>
 
       <p>
@@ -357,14 +346,14 @@
     </div>
 
     <div class="footer">
-  © 2026 Rostrum1<br>
-  Practical auction technology consultancy.<br>
-  United Kingdom<br><br>
+      © 2026 Rostrum1<br>
+      Practical auction technology consultancy.<br>
+      United Kingdom<br><br>
 
-  <a href="privacy.html" style="color:#8e8e8e; text-decoration:none;">
-    Privacy Policy
-  </a>
-</div>
+      <a href="privacy.html">
+        Privacy Policy
+      </a>
+    </div>
 
   </div>
 
