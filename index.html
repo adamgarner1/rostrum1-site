@@ -1,29 +1,306 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Rostrum1</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Rostrum1 | Auction Technology Specialists</title>
+
   <style>
-    body {
-      margin: 0;
-      background: #111;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding-top: 25vh;
+
+    *{
+      box-sizing:border-box;
     }
-    h1 {
-      font-size: 64px;
-      margin-bottom: 10px;
+
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:#050505;
+      color:white;
+      overflow-x:hidden;
     }
-    p {
-      font-size: 24px;
-      color: #bbb;
+
+    .background-glow{
+      position:fixed;
+      inset:0;
+      background:
+        radial-gradient(circle at top left, rgba(0,140,255,0.18), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(0,140,255,0.12), transparent 35%);
+      z-index:0;
     }
+
+    .page{
+      position:relative;
+      z-index:1;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:50px 20px;
+    }
+
+    .container{
+      width:100%;
+      max-width:1100px;
+      background:rgba(12,12,12,0.92);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:30px;
+      padding:60px 40px;
+      box-shadow:0 40px 100px rgba(0,0,0,0.7);
+      backdrop-filter:blur(10px);
+    }
+
+    .logo{
+      display:block;
+      margin:0 auto 30px auto;
+      width:100%;
+      max-width:460px;
+    }
+
+    .tagline{
+      text-align:center;
+      color:#2da8ff;
+      text-transform:uppercase;
+      letter-spacing:4px;
+      font-size:14px;
+      margin-bottom:25px;
+      font-weight:bold;
+    }
+
+    h1{
+      text-align:center;
+      font-size:clamp(38px, 6vw, 72px);
+      margin:0 0 25px 0;
+      line-height:1.1;
+      font-weight:700;
+    }
+
+    .intro{
+      max-width:850px;
+      margin:0 auto 45px auto;
+      text-align:center;
+      color:#d2d2d2;
+      font-size:22px;
+      line-height:1.7;
+    }
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:20px;
+      margin-bottom:50px;
+    }
+
+    .service{
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:20px;
+      padding:28px;
+      transition:0.3s;
+    }
+
+    .service:hover{
+      transform:translateY(-4px);
+      border-color:rgba(45,168,255,0.4);
+    }
+
+    .service h2{
+      margin-top:0;
+      margin-bottom:14px;
+      color:white;
+      font-size:22px;
+    }
+
+    .service p{
+      margin:0;
+      color:#cfcfcf;
+      line-height:1.6;
+      font-size:16px;
+    }
+
+    .contact-section{
+      max-width:700px;
+      margin:0 auto;
+    }
+
+    .contact-title{
+      text-align:center;
+      font-size:32px;
+      margin-bottom:25px;
+    }
+
+    form{
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+    }
+
+    input,
+    textarea{
+      width:100%;
+      padding:18px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,0.1);
+      background:#0d0d0d;
+      color:white;
+      font-size:16px;
+    }
+
+    textarea{
+      min-height:140px;
+      resize:vertical;
+    }
+
+    input:focus,
+    textarea:focus{
+      outline:none;
+      border-color:#2da8ff;
+    }
+
+    button{
+      background:#1d9fff;
+      color:white;
+      border:none;
+      border-radius:14px;
+      padding:18px;
+      font-size:17px;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    button:hover{
+      background:#45b2ff;
+    }
+
+    .footer-note{
+      text-align:center;
+      margin-top:25px;
+      color:#8e8e8e;
+      font-size:14px;
+    }
+
+    @media(max-width:700px){
+
+      .container{
+        padding:40px 22px;
+      }
+
+      .intro{
+        font-size:18px;
+      }
+
+      h1{
+        font-size:44px;
+      }
+
+    }
+
   </style>
 </head>
+
 <body>
-  <h1>Rostrum1</h1>
-  <p>Auction Technology & Digital Solutions</p>
-  <p>Launching Soon</p>
+
+<div class="background-glow"></div>
+
+<div class="page">
+
+  <div class="container">
+
+    <img src="logo.png" alt="Rostrum1 Logo" class="logo">
+
+    <div class="tagline">
+      Auction Technology Specialists
+    </div>
+
+    <h1>
+      Digital auction systems, built properly.
+    </h1>
+
+    <div class="intro">
+      Rostrum1 provides practical technology solutions for auction houses and specialist businesses.
+      From digital rostrum and internet bidding set-ups to bespoke internal applications, valuation systems,
+      workflow tools, website reviews and business process improvements — designed around the realities of
+      live operations.
+    </div>
+
+    <div class="services">
+
+      <div class="service">
+        <h2>Digital Rostrum</h2>
+        <p>
+          Internet bidding integration, livestreaming workflows, saleroom technology,
+          hybrid auction solutions and practical auction-day systems.
+        </p>
+      </div>
+
+      <div class="service">
+        <h2>Custom Development</h2>
+        <p>
+          Bespoke applications for valuations, cataloguing, reporting, inventory,
+          internal workflows and operational efficiency.
+        </p>
+      </div>
+
+      <div class="service">
+        <h2>Business Systems</h2>
+        <p>
+          Website reviews, workflow analysis, process improvements, automation
+          opportunities and practical digital consultancy.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="contact-section">
+
+      <div class="contact-title">
+        Contact Us
+      </div>
+
+      <form action="https://formspree.io/f/REPLACE_THIS" method="POST">
+
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+        >
+
+        <input
+          type="text"
+          name="company"
+          placeholder="Company"
+        >
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email Address"
+          required
+        >
+
+        <textarea
+          name="message"
+          placeholder="Tell us a little about your project or requirements..."
+          required
+        ></textarea>
+
+        <button type="submit">
+          Send Enquiry
+        </button>
+
+      </form>
+
+      <div class="footer-note">
+        Launching soon.
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
 </body>
 </html>
